@@ -135,21 +135,21 @@ pytest APITest.py --junitxml=testSuiteReport.xml
 ![Pytest](https://github.com/user-attachments/assets/7075fe33-6850-4ed2-bc48-f5f32ffd3085)
 
 ## Running endpoint API and test suite with subprocess
-A python script was implemented to run both process using one script that use subprocess to run ``` APITest.py  ``` in terminal type:
+A python script was implemented to run both process using one script that use subprocess, to run ``` APITestSub.py  ``` in terminal type:
 ``` bash
 python3 APITestSub.py
 ```
-First the endpoint API should be executed in one subprocess, after that the test suite should start, once the test suite subprocess finish the endpoint API subprocess will finished too.
+First the endpoint API should be executed in one subprocess, after that the test suite should start in a different subprocess, once the test suite subprocess finish the endpoint API subprocess will finished too.
 You can look for the results in the XML report generated in the root folder.
 
 ## Modifying test inputs
-The test suite was created to be able to modify easily their input values in order to test the endpoint API, follow the next steps if you want to modified them.
+The test suite was created to be able to modify easily their input values in order to test the endpoint API, follow the next steps if you want to modify them.
 
-1. You can use [nano](https://www.nano-editor.org/) to modified the test suite ``` APITest.py  ``` in terminal type:
+1. You can use [nano](https://www.nano-editor.org/) to modify the test suite ``` APITest.py  ``` in terminal type:
 ``` bash
 nano APITest.py
 ```
-2. The test suite file ``` APITest.py  ``` should open, to modified the inputs locate the lists:
+2. The test suite file ``` APITest.py  ``` should open, to modify the inputs locate the lists:
 
 #### Datetime functionality:
 ``` validDatetimeCmds[]  ```
