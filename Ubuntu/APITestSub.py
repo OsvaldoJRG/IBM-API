@@ -6,14 +6,14 @@ import time
 
 endpointAPIFile = "IBMAplication"
 APITestFile = "APITest"
-interpreter = "py -3"
+interpreter = "python3"
 
 def runSubPythonFile(interpreter = "", file = ""):
-    sub = subprocess.Popen(interpreter + " " + file + ".py", stdout=True, text=True)
+    sub = subprocess.Popen(interpreter + " " + file + ".py", shell=True, stdout=True, text=True)
     return sub
 
 def runSubPytestFile(file = ""):
-    sub = subprocess.Popen("pytest " + file + ".py" + " --html=testSuiteReport.html", stdout=True, text=True)
+    sub = subprocess.Popen("pytest " + file + ".py" + " --junitxml=testSuiteReport.xml", shell=True, stdout=True, text=True)
     return sub
 
 serverSub = runSubPythonFile(interpreter,endpointAPIFile)
